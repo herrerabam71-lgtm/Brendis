@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pétalos & Encanto — Florería Boutique & Diseño Botánico</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#FDFBF7',
+            ivory: '#F7F2EB',
+            blush: '#FADADD',
+            dustyRose: '#E8A598',
+            deepRose: '#C86D6D',
+            sage: '#2C4C3B',
+            sageLight: '#4A725C',
+            gold: '#C5A059',
+            goldLight: '#DFC48C',
+            charcoal: '#2D2A26',
+            mutedText: '#665E57'
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            accent: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Montserrat"', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Textura sutil de papel artesanal */
+    body {
+      background-color: #FDFBF7;
+      background-image: radial-gradient(rgba(197, 160, 89, 0.08) 1px, transparent 0);
+      background-size: 28px 28px;
+      color: #2D2A26;
+      overflow-x: hidden;
+    }
+
+    /* Marco ornamental doble dorado */
+    .ornate-frame {
+      position: relative;
+      border: 1px solid rgba(197, 160, 89, 0.45);
+      box-shadow: 0 20px 50px -15px rgba(44, 76, 59, 0.08);
+    }
+    .ornate-frame::before {
+      content: '';
+      position: absolute;
+      inset: 7px;
+      border: 1px solid rgba(197, 160, 89, 0.25);
+      pointer-events: none;
+      border-radius: inherit;
+    }
+
+    /* Marco tipo arco botánico */
+    .arch-frame {
+      border-radius: 220px 220px 24px 24px;
+      border: 1.5px solid #C5A059;
+      padding: 10px;
+      background: linear-gradient(180deg, rgba(250, 218, 221, 0.3) 0%, rgba(253, 251, 247, 0.9) 100%);
+    }
+
+    /* Pétalos flotantes animados */
+    @keyframes floatPetal {
+      0% { transform: translateY(-10vh) translateX(0) rotate(0deg); opacity: 0; }
+      15% { opacity: 0.7; }
+      85% { opacity: 0.6; }
+      100% { transform: translateY(105vh) translateX(45px) rotate(360deg); opacity: 0; }
+    }
+    .petal {
+      position: fixed;
+      top: -5%;
+      pointer-events: none;
+      z-index: 5;
+      animation: floatPetal linear infinite;
+    }
+
+    /* Efecto de brillo suave en tarjetas */
+    .floral-card {
+      transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+    .floral-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 24px 48px -12px rgba
+  
